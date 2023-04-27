@@ -5,20 +5,23 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using LibraryManagementSystem.Models;
+using System.Linq.Dynamic.Core;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace LibraryManagementSystem.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
-        {
-            return View();
-        }
+        //public IActionResult Index()
+        //{
+        //    var context = new Entities();
+        //    ViewBag.Racks = context.Rack.Select(x => new SelectListItem { Value = x.RackId.ToString(), Text = x.Code });
+        //    ViewBag.Shelves = context.Shelf.Select(x => new SelectListItem { Value = x.ShelfId.ToString(), Text = x.Code });
+        //    return View();
+        //}
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
+       
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
